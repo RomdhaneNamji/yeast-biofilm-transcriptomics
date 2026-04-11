@@ -1,0 +1,18 @@
+# Large files
+*.fastq
+*.fastq.gz
+*.bam
+*.sam
+
+# Alignment + temp
+alignments/
+raw_fastq/
+tmp/
+
+# System
+.DS_Store
+*.log
+
+# R
+.Rhistory
+.RData

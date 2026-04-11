@@ -1,0 +1,27 @@
+{
+    "id": "FDF972B9",
+    "path": "D:/GIS/RNAseq_yeast_2024/R/scripts/edgeR.R",
+    "project_path": "scripts/edgeR.R",
+    "type": "r_source",
+    "hash": "300822833",
+    "contents": "",
+    "dirty": false,
+    "created": 1774802987629.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "73,0",
+        "scrollLine": "58"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1774807634,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1774807634597,
+    "read_only": false,
+    "read_only_alternatives": []
+}
