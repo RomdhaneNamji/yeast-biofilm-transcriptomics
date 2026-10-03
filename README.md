@@ -5,13 +5,13 @@
 [![RNA-seq](https://img.shields.io/badge/Analysis-RNA--seq-blue)]()
 
 ## Overview
-This repository contains two unified bioinformatics workflows for analyzing RNA-seq data derived from yeast colony biofilms. The projects investigate how gene expression in yeast colonies is driven by spatial localization, temporal development, and genotype, highlighting the complex metabolic adaptations that occur during biofilm maturation.
+This repository consolidates two bioinformatics workflows for analyzing RNA-seq data derived from yeast colony biofilms. The projects investigate how gene expression in yeast colonies is driven by spatial localization, temporal development, and genotype, highlighting the complex metabolic adaptations that occur during biofilm maturation.
 
 ## Part I: Metabolic Differentiation (2017 Study Reproduction)
 An independent computational reproduction of a major yeast biofilm transcriptomics study, validating the distinct metabolic signatures of localized cellular sub-populations.
 
 **Primary Reference:** 
-Maršíková, J., Wilkinson, D., Hlaváček, O., et al. (2017). *Metabolic differentiation of surface and invasive cells of yeast colony biofilms revealed by gene expression profiling*. BMC Genomics 18, 814. [DOI: 10.1186/s12864-017-3834-z](https://doi.org/10.1186/s12864-017-3834-z)
+Maršíková, J., Wilkinson, D., Hlaváček, O., et al. (2017). *Metabolic differentiation of surface and invasive cells of yeast colony biofilms revealed by gene expression profiling*. BMC Genomics 18, 814. [DOI: 10.1186/s12864-017-4214-4](https://doi.org/10.1186/s12864-017-4214-4)
 
 ### Biological Objectives & Findings
 * **Goal:** Reproduce the main transcriptional differences between aerial (surface) and root (invasive) cells.
@@ -30,11 +30,11 @@ Maršíková, J., Wilkinson, D., Hlaváček, O., et al. (2017). *Metabolic diffe
 ## Part II: Spatiotemporal & Genotypic Expression Patterns
 A comprehensive analysis of 36 RNA-seq samples investigating the interplay between spatial positioning, temporal aging, and genetic knockouts in yeast colonies.
 
-**Dataset Context:** 
-* **Temporal & Spatial Variables:** Day 2 (early stage) vs. Day 5 Outside vs. Day 5 Inside.
-* **Genotypic Variables:** Wild-Type (F13), tec1Δ, sfl1Δ, and dig1Δ knockouts.
+**Primary Reference:**
+Cromie, G. A., Tan, Z., Hays, M., Sirr, A., Dudley, A. M. (2024). *Spatiotemporal patterns of gene expression during development of yeast colonies*. PLOS One. [DOI: 10.1371/journal.pone.0311061](https://doi.org/10.1371/journal.pone.0311061)
 
 ### Biological Objectives & Findings
+* **Dataset Context:** Analyzed across temporal/spatial variables (Day 2 vs. Day 5 Outside vs. Day 5 Inside) and genotypic variables (Wild-Type F13, tec1Δ, sfl1Δ, dig1Δ).
 * **Goal:** Model how spatiotemporal context and specific genotypes influence the global transcriptional landscape.
 * **Findings:**
   * Spatiotemporal effects heavily dominate gene expression variance across the biofilm.
