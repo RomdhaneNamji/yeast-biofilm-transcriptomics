@@ -1,0 +1,6 @@
+Genes after ORF filter (^Y): 6575
+Significant genotype additive (Holm < 0.01): 333
+Significant spatiotemporal additive (Holm < 0.01): 2770
+Significant for both additive factors: 205
+Strong additive genes: 690
+Strong interaction genes: 65

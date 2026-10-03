@@ -1,0 +1,78 @@
+## Reproduction of Cromie et al.paper
+supressPackageStartupMessages({
+  library (edgeR)
+})
+
+
+# ---------------- Paths -----------
+
+counts_file <- "data/gene_counts.txt" 
+metadata_file <- "data/sample_metadata.csv"
+results_dir <- "results"
+plots_dir <- "plots"
+
+dir.create(results_dir, showWarnings = FALSE, recursive = TRUE)
+dir.create(plots_dir, showWarnings = FALSE, recursive = TRUE)
+
+#------------------Read featureCounts table ---
+
+counts <- read.delim(
+  counts_file,
+  comment.char = "#",
+  check.names = FALSE,
+  stringsAsFactors = FALSE
+)
+
+# first 6 columns are feature annotation from featureCounts
+count_matrix <- counts[,7:ncol(counts), drop = FALSE]
+rownames(count_matrix) <- counts$Geneid
+
+# clean sample names
+sample_names <- colnames(count_matrix)
+sample_names <- basename(sample_names)
+sample_names <- sub("\\.sorted\\.bam$", "", sample_names)
+colnames(count_matrix) <- sample_names
+
+#convert to integer matrix
+count_matrix <- as.matrix(count_matrix)
+storage.mode <- "integer" 
+
+
+# ---------- Read metadata -------------
+
+meta <- read.csv(metadata_file, stringsAsFactors = FALSE)
+required_cols <- c("sample", "genotype", "spatiotemporal")
+missing_cols <- setdiff(required_cols,colnames(meta))
+
+if (length(missing_cols) > 0) {
+  stop("Missing required metadata columns: ", paste(missing_cols, collapse = ", "))
+}
+
+# Reorder metadata to match counts 
+meta <- meta[match(colnames(count_matrix),meta$sample), ]
+if (any(is.na(meta$sample))) {
+  stop("Some count columns are missing from sample_metadata.csv")
+}
+if (!all(meta$sample == colnames(count_matrix))) {
+  stop("Metadata order mismatch after matching")
+}
+
+# Set factor levels
+meta$genotype <- factor(meta$genotype, levels = c("tec1","wt","sfl1","dig1"))
+meta$condition <- factor(
+  meta$condition, levels = c("day2","day5_inside","day5_outside")
+)
+
+if (any(is.na(meta$genotype))) {
+  stop("Invalid genotype values found in metadata")
+}
+if (any(is.na(meta$condition))) {
+  stop("Invalid spatiotemporal values found in metadata")
+}
+
+write.csv(meta, file.path(results_dir, "metadata_reordered.csv"), row.names = FALSE)
+
+
+# --------------- Create DGElist and normaize -------
+dge <- DGEList(counts = count_matrix)
+dge <- calcNormFactors(dge, method = "TMM")
