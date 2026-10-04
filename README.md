@@ -47,6 +47,25 @@ Cromie, G. A., Tan, Z., Hays, M., Sirr, A., Dudley, A. M. (2024). *Spatiotempora
 * **Statistical Modeling:** Two-factor ANOVA and differential expression analysis conducted in R using `edgeR`.
 * **Visualization:** Generation of expression heatmaps and cluster profiles to map spatiotemporal gradients.
 
+
+### Reproducibility & Setup
+This project utilizes a Conda environment to ensure seamless reproducibility across local workstations and HPC clusters.
+
+**1. Clone the repository:**
+\`\`\`bash
+git clone https://github.com/RomdhaneNamji/yeast-biofilm-transcriptomics.git
+cd yeast-biofilm-transcriptomics
+\`\`\`
+
+**2. Create and activate the environment:**
+\`\`\`bash
+conda env create -f environment.yml
+conda activate yeast-transcriptomics
+\`\`\`
+*(Note: This environment automatically installs R, necessary Bioconductor packages, and all required Bash utilities including HISAT2, Bowtie2, and samtools).*
+
+
+
 ---
 ## Repository Structure
 ```text

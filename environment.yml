@@ -1,0 +1,25 @@
+name: yeast-transcriptomics
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  # Command Line Utilities
+  - sra-tools
+  - fastqc
+  - hisat2
+  - bowtie2
+  - samtools
+  - subread
+  # Python Dependencies
+  - python>=3.8
+  - pip
+  # R and Bioconductor
+  - r-base>=4.0
+  - r-ggplot2
+  - r-pheatmap
+  - bioconductor-deseq2
+  - bioconductor-edger
+  # Pip dependencies via requirements.txt
+  - pip:
+    - -r requirements.txt
