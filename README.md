@@ -47,8 +47,9 @@ Cromie, G. A., Tan, Z., Hays, M., Sirr, A., Dudley, A. M. (2024). *Spatiotempora
 * **Statistical Modeling:** Two-factor ANOVA and differential expression analysis conducted in R using `edgeR`.
 * **Visualization:** Generation of expression heatmaps and cluster profiles to map spatiotemporal gradients.
 
+---
 
-### Reproducibility & Setup
+## Reproducibility & Setup
 This project utilizes a Conda environment to ensure seamless reproducibility across local workstations and HPC clusters.
 
 **1. Clone the repository:**
