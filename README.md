@@ -53,16 +53,16 @@ Cromie, G. A., Tan, Z., Hays, M., Sirr, A., Dudley, A. M. (2024). *Spatiotempora
 This project utilizes a Conda environment to ensure seamless reproducibility across local workstations and HPC clusters.
 
 **1. Clone the repository:**
-\`\`\`bash
+```bash
 git clone https://github.com/RomdhaneNamji/yeast-biofilm-transcriptomics.git
 cd yeast-biofilm-transcriptomics
-\`\`\`
+```
 
 **2. Create and activate the environment:**
-\`\`\`bash
+```bash
 conda env create -f environment.yml
 conda activate yeast-transcriptomics
-\`\`\`
+```
 *(Note: This environment automatically installs R, necessary Bioconductor packages, and all required Bash utilities including HISAT2, Bowtie2, and samtools).*
 
 
