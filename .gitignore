@@ -1,0 +1,19 @@
+# Raw and aligned sequencing data
+*.fastq
+*.fq
+*.fastq.gz
+*.fq.gz
+*.sam
+*.bam
+*.bai
+
+# R environment artifacts
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+.Rapp.history
+
+# OS generated files
+.DS_Store
+Thumbs.db
