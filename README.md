@@ -48,14 +48,15 @@ Cromie, G. A., Tan, Z., Hays, M., Sirr, A., Dudley, A. M. (2024). *Spatiotempora
 * **Visualization:** Generation of expression heatmaps and cluster profiles to map spatiotemporal gradients.
 
 ---
-
 ## Repository Structure
 ```text
 📦 yeast-biofilm-transcriptomics
  ┣ 📂 workflows
- ┃ ┣ 📂 reproduction-2017       # Pipeline scripts (Bash/R) for the BMC Genomics (2017) study
- ┃ ┗ 📂 spatiotemporal          # Scripts (Bash/R) for spatiotemporal edgeR analysis
- ┣ 📂 scripts                   # Shared Bash processing scripts and R utilities
- ┣ 📂 results                   # Output tables, count matrices, and differential expression logs
- ┣ 📂 plots                     # Heatmaps, volcano plots, and cluster profiles
+ ┃ ┣ 📂 reproduction-2017       # Complete pipeline (Bash/R), results, and plots for the 2017 study
+ ┃ ┗ 📂 spatiotemporal          # Complete pipeline (Bash/R), results, and plots for the 2024 study
+ ┣ 📜 .gitignore
+ ┣ 📜 LICENSE
  ┗ 📜 README.md                 # Project documentation
+
+**Romdhane MRAD NAMJI**
+MSc Bioinformatics Candidate | Pázmány Péter Catholic University
